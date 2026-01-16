@@ -1,0 +1,36 @@
+/* ===== 基本設定 ===== */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* TODO 1：
+   使用 Flexbox
+   讓 sidebar 與 content 在桌機版左右排列
+*/
+.layout {
+    /* TODO */
+}
+
+/* Sidebar */
+.sidebar {
+    /* TODO：
+       設定適合的寬度與背景色
+    */
+}
+
+/* Content */
+.content {
+    /* TODO：
+       讓主內容區占滿剩餘空間
+    */
+}
+
+/* ===== RWD TODO：手機版（小於 600px） ===== */
+@media (max-width: 600px) {
+
+    /* TODO 2：
+       將版面改為上下排列
+    */
+
+}
