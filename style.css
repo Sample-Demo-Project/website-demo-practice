@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;   /* 淡灰藍背景 */
+    color: #2e3440;              /* 深灰文字 */
+}
+
+/* Header */
+.header {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #3b4a6b;   /* 靛藍主色 */
+    color: #ffffff;
+}
+
+.header p {
+    max-width: 600px;
+    margin: 10px auto 0;
+    color: #d8dee9;              /* 淡灰藍文字 */
+}
+
+/* Main container */
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Practice card */
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 6px 16px rgba(59, 74, 107, 0.12); /* 帶主色的陰影 */
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #3b4a6b;              /* 與 header 呼應 */
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 12px;
+    text-decoration: none;
+    color: white;
+    background-color: #5e81ac;   /* 柔和藍 */
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+.card a:hover {
+    background-color: #4c6f99;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* RWD */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
