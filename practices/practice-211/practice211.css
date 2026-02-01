@@ -1,0 +1,19 @@
+body {
+    background-color: #f5deab;
+}
+
+#shop-title {
+    color: #6b4226;
+    text-align: center;
+    margin-top: 80px;
+}
+
+h2 {
+    color: #8b5e3c;
+    text-align: center;
+}
+
+img[src] {
+    width: 300px;
+    border-radius: 15px;
+}
