@@ -8,7 +8,7 @@ body {
 .navbar {
     background-color: #333;
     padding: 10px;
-
+    flex-direction: row;
     /* TODO 1：
        使用 Flexbox
        讓選單項目「橫向排列」
@@ -18,7 +18,7 @@ body {
 .navbar a {
     color: white;
     text-decoration: none;
-
+    margin: 0 15px;
     /* TODO 2：
        設定適合的間距
     */
@@ -26,9 +26,10 @@ body {
 
 /* ===== RWD：手機版 ===== */
 @media (max-width: 600px) {
-
+    .navbar {
+    flex-direction: column;
     /* TODO 3：
        將導覽列改為「直向排列」
     */
-
+    }
 }
