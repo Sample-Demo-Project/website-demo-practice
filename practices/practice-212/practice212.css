@@ -31,3 +31,20 @@ h1 {
 }
 
 /* ======== RWD TODO：手機版（小於 600px） ======== */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;  /* 由左右排改為上下排 */
+    }
+
+    .avatar {
+        width: 100%;              /* 頭像寬度改為 100% */
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 10px;
+    }
+}
