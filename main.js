@@ -4,7 +4,7 @@ const container = document.getElementById("practice-list");
 const practices = {
     title: "Practice",
     start: 210,
-    end: 213,
+    end: 220,
     basePath: "practices",
     filePrefix: "practice"
 };
@@ -27,7 +27,7 @@ for (let i = practices.start; i <= practices.end; i++) {
 const assignments = {
     title: "Assignment",
     start: 4,
-    end: 4,
+    end: 6,
     basePath: "assignments",
     filePrefix: "assignment"
 };
