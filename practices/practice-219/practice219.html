@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice - Todo with EventListener</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 16px;
+    }
+
+    .input-area {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    input {
+      flex: 1;
+      padding: 8px 10px;
+    }
+
+    button {
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+    }
+
+    .done {
+      text-decoration: line-through;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Todo List</h1>
+
+  <div class="input-area">
+    <input id="todo-input" type="text" placeholder="輸入一件事情…" />
+    <button id="add-btn">新增</button>
+  </div>
+
+  <ul id="todo-list"></ul>
+
+  <script src="main_answer.js"></script>
+</body>
+</html>

@@ -1,121 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Practice 216 - Student Score CRUD</title>
-  <link rel="stylesheet" href="practice216.css">
+    <meta charset="UTF-8">
+    <title>System Announcement</title>
+
 </head>
 <body>
-  <div class="app">
-    <h1>Practice 215</h1>
-    <p>學生成績管理（新增 / 修改 / 刪除）</p>
 
-    <!-- 新增區 -->
-    <div class="form">
-      <input id="nameInput" type="text" placeholder="學生姓名（例：Alex）" />
-      <input id="scoreInput" type="number" placeholder="分數（0-100）" />
-      <button id="addBtn">新增</button>
+    <h1>System Announcement</h1>
+    <p>目前系統狀態如下：</p>
+
+    <div id="status-normal" class="status">
+        系統目前運作正常。
     </div>
 
-    <div class="hint">
-      新增：輸入姓名與分數 → 按「新增」<br>
-      修改：按「修改」→ 輸入新分數 → 確定<br>
-      刪除：按「刪除」
+    <div id="status-maintenance" class="status">
+        系統維護中，請稍後再試。
     </div>
 
-    <!-- 清單顯示區 -->
-    <ul id="list" class="list"></ul>
-
-    <div class="footer">
-      <div id="countText">Students: 0</div>
-      <div id="avgText">Average: -</div>
+    <div id="status-closed" class="status">
+        本活動已結束，感謝您的參與。
     </div>
-  </div>
 
-  <script>
-    const students = [
-      { name: "Tom", score: 80 },
-      { name: "Amy", score: 90 },
-      { name: "John", score: 70 }
-    ];
-
-    // DOM refs
-    const listEl = document.getElementById("list");
-    const nameInput = document.getElementById("nameInput");
-    const scoreInput = document.getElementById("scoreInput");
-    const addBtn = document.getElementById("addBtn");
-    const countText = document.getElementById("countText");
-    const avgText = document.getElementById("avgText");
-
-    // TODO 1：
-    // 寫一個 function isValidScore(score)
-    // 需求：score 必須是 0~100 的數字，符合回傳 true，否則 false
-    function isValidScore(score) {
-      // TODO
-      return true;
-    }
-
-    // TODO 2：
-    // 寫一個 function calcAverage()
-    // 需求：用回圈算出平均分數
-    // - 沒有學生時回傳 null
-    function calcAverage() {
-      // TODO
-      return null;
-    }
-
-    // TODO 3：
-    // 寫一個 function render()
-    // 需求：
-    // - 清空 listEl
-    // - 用回圈跑 students
-    // - 每一筆建立 <li class="row">，內含：
-    //   左側：姓名與分數
-    //   右側：兩個按鈕「修改」「刪除」
-    // - 按鈕要能呼叫 editStudent(i) / deleteStudent(i)
-    // - 更新底部 Students 與 Average
-    function render() {
-      // TODO
-    }
-
-    // TODO 4：
-    // 寫一個 function addStudent()
-    // 需求：
-    // - 讀取 nameInput / scoreInput
-    // - students.push({ name, score })
-    // - 清空輸入框
-    // - render()
-    function addStudent() {
-      // TODO
-    }
-
-    // TODO 5：
-    // 寫一個 function editStudent(index)
-    // 需求：
-    // - 用 prompt 取得新分數（預設帶入原本分數）
-    // - 驗證分數合法
-    // - students[index].score = newScore
-    // - render()
-    function editStudent(index) {
-      // TODO
-    }
-
-    // TODO 6：
-    // 寫一個 function deleteStudent(index)
-    // 需求：
-    // - 可用 confirm 詢問是否刪除
-    // - students.splice(index, 1)
-    // - render()
-    function deleteStudent(index) {
-      // TODO
-    }
-
-    // 事件：新增按鈕
-    addBtn.addEventListener("click", addStudent);
-
-    // 頁面載入先 render 一次
-    render();
-  </script>
 </body>
 </html>
