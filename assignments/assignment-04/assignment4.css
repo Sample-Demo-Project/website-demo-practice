@@ -3,13 +3,14 @@ body {
     font-family: Arial, sans-serif;
     padding: 20px;
 }
-
 /* TODO 1：
    使用 Flexbox
    讓 sidebar 與 content 在桌機版左右排列
 */
 .layout {
     /* TODO */
+    display: flex;
+    flex-direction: row;
 }
 
 /* Sidebar */
@@ -17,6 +18,9 @@ body {
     /* TODO：
        設定適合的寬度與背景色
     */
+    background-color: #ff9966;
+    padding: 10px;
+    text-align: center;
 }
 
 /* Content */
@@ -24,6 +28,8 @@ body {
     /* TODO：
        讓主內容區占滿剩餘空間
     */
+    text-align: center;
+    width: 100%;
 }
 
 /* ===== RWD TODO：手機版（小於 600px） ===== */
@@ -32,5 +38,7 @@ body {
     /* TODO 2：
        將版面改為上下排列
     */
-
+    .layout {
+        flex-direction: column;
+        }
 }
