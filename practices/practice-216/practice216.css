@@ -1,0 +1,14 @@
+#status-normal {
+    color: green;
+    display: none;
+}
+
+#status-maintenance {
+    color: orange;
+    display: none;
+}
+
+#status-closed {
+    color: grey;
+    display: none;
+}
