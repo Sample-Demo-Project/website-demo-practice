@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>表單送出</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>意見回饋表單</h1>
+    <p>練習表單送出與後端接收。</p>
+
+    <form id="form" class="form">
+      <div>
+        <label for="name">姓名</label>
+        <input id="name" name="name" type="text" placeholder="例：Amy" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="例：amy@mail.com" />
+      </div>
+      <div>
+        <label for="message">意見</label>
+        <textarea id="message" name="message" rows="4" placeholder="寫下你的建議..."></textarea>
+      </div>
+      <button type="submit">送出</button>
+    </form>
+
+    <div id="status">尚未送出</div>
+
+    <div class="card">
+      <div class="label">回傳結果</div>
+      <pre id="result">-</pre>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
