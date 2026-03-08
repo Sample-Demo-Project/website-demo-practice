@@ -41,19 +41,22 @@
     ];
 
     // DOM refs
-    const listEl = document.getElementById("list");
-    const nameInput = document.getElementById("nameInput");
-    const scoreInput = document.getElementById("scoreInput");
-    const addBtn = document.getElementById("addBtn");
-    const countText = document.getElementById("countText");
-    const avgText = document.getElementById("avgText");
+    const listEl = document.getElementById("list"); // 學生清單的 <ul>
+    const nameInput = document.getElementById("nameInput"); // 學生姓名輸入框
+    const scoreInput = document.getElementById("scoreInput"); // 學生成績輸入框
+    const addBtn = document.getElementById("addBtn"); // 新增按鈕
+    const countText = document.getElementById("countText"); // 學生人數顯示
+    const avgText = document.getElementById("avgText"); // 平均分數顯示
 
     // TODO 1：
     // 寫一個 function isValidScore(score)
     // 需求：score 必須是 0~100 的數字，符合回傳 true，否則 false
     function isValidScore(score) {
       // TODO
-      return true;
+      if (typeof score === "number" && score >= 0 && score <= 100) {
+        return true;
+      }
+      return false;
     }
 
     // TODO 2：
@@ -62,6 +65,14 @@
     // - 沒有學生時回傳 null
     function calcAverage() {
       // TODO
+      let student_sum = 0;
+      for (student of students) {
+        student_sum += student.score;
+        console.log(student);
+      }
+      if (students.length > 0) {
+        return student_sum / students.length;
+      }
       return null;
     }
 
@@ -77,6 +88,28 @@
     // - 更新底部 Students 與 Average
     function render() {
       // TODO
+      listEl.innerHTML = "";
+      for (let i = 0; i < students.length; i++) {
+          const student = students[i];
+          const li = document.createElement("li");
+          li.classList.add("row");
+          li.innerHTML = `
+              <div>${student.name}: ${student.score}</div>
+              <div>
+                <button onclick="editStudent(${i})">修改</button>
+                <button onclick="deleteStudent(${i})">刪除</button>
+              </div>
+          `;
+          console.log(li);
+          listEl.appendChild(li);
+      }
+      countText.textContent = `Students: ${students.length}`;
+      const avg = calcAverage();
+      if (avg === null) {
+        avgText.textContent = "Average: -";
+      } else {
+        avgText.textContent = `Average: ${avg}`;
+      }
     }
 
     // TODO 4：
@@ -88,6 +121,15 @@
     // - render()
     function addStudent() {
       // TODO
+      const name = nameInput.value;
+      const score = parseInt(scoreInput.value);
+      if (name === "" || !isValidScore(score)) {
+        alert("請輸入有效的姓名與分數（0-100）");
+      }
+      students.push({ name, score });
+      nameInput.value = "";
+      scoreInput.value = "";
+      render();
     }
 
     // TODO 5：
@@ -99,6 +141,14 @@
     // - render()
     function editStudent(index) {
       // TODO
+      let newScore = prompt("請輸入新的分數（0-100）", students[index].score);
+      newScore = parseInt(newScore);
+      if (!isValidScore(newScore)) {
+        alert("請輸入有效的分數（0-100）");
+      } else {
+        students[index].score = newScore;
+        render();
+      }
     }
 
     // TODO 6：
@@ -109,6 +159,11 @@
     // - render()
     function deleteStudent(index) {
       // TODO
+      const confirmDelete = confirm(`確定要刪除 ${students[index].name} 的資料嗎？`);
+      if (confirmDelete) {
+        students.splice(index, 1);
+        render();
+      }
     }
 
     // 事件：新增按鈕
