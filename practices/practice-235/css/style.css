@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", Arial, sans-serif;
+  background: #f6f7fb;
+  color: #222;
+  padding: 24px;
+}
+
+.app {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #e4e6ef;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(28, 35, 90, 0.06);
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+p {
+  margin: 0 0 16px;
+  color: #555;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.form input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #cfd3e1;
+  border-radius: 8px;
+  outline: none;
+}
+
+.form input:focus {
+  border-color: #3b67ff;
+}
+
+.form button {
+  padding: 10px 14px;
+  border: 1px solid #3b67ff;
+  background: #3b67ff;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  filter: brightness(0.96);
+}
+
+#status {
+  margin: 8px 0 12px;
+  color: #666;
+}
+
+.card {
+  background: #f9fafc;
+  border: 1px solid #e6e9f5;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.label {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 6px;
+}

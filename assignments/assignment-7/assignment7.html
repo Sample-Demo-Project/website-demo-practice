@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>觀影清單</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>觀影清單管理</h1>
+    <p>練習 GET / POST / PUT / DELETE。</p>
+
+    <div class="section">
+      <h3>新增電影（POST）</h3>
+      <div class="form">
+        <input id="titleInput" type="text" placeholder="片名（例：Inception）" />
+        <input id="yearInput" type="number" placeholder="年份（例：2010）" />
+        <button id="addBtn">新增</button>
+      </div>
+      <div id="addStatus">尚未新增</div>
+    </div>
+
+    <div class="section">
+      <h3>查詢電影（GET）</h3>
+      <div class="form">
+        <input id="getIdInput" type="number" placeholder="輸入 id（例：1）" />
+        <button id="getBtn">查詢</button>
+      </div>
+      <div id="getStatus">尚未查詢</div>
+    </div>
+
+    <div class="section">
+      <h3>更新電影（PUT）</h3>
+      <div class="form">
+        <input id="putIdInput" type="number" placeholder="輸入 id（例：1）" />
+        <input id="putTitleInput" type="text" placeholder="新片名" />
+        <input id="putYearInput" type="number" placeholder="新年份" />
+        <button id="putBtn">更新</button>
+      </div>
+      <div id="putStatus">尚未更新</div>
+    </div>
+
+    <div class="section">
+      <h3>刪除電影（DELETE）</h3>
+      <div class="form">
+        <input id="deleteIdInput" type="number" placeholder="輸入 id（例：1）" />
+        <button id="deleteBtn">刪除</button>
+      </div>
+      <div id="deleteStatus">尚未刪除</div>
+    </div>
+
+    <div class="card">
+      <div class="label">回傳結果</div>
+      <pre id="result">-</pre>
+    </div>
+  </div>
+
+  <script src="js/main_ans.js"></script>
+</body>
+</html>

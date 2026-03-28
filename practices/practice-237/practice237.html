@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>備忘錄</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>簡易備忘錄</h1>
+    <p>練習 POST 新增與 GET 查詢。</p>
+
+    <div class="section">
+      <h3>新增備忘錄（POST）</h3>
+      <div class="form">
+        <input id="noteInput" type="text" placeholder="內容（例：買牛奶）" />
+        <button id="addBtn">新增</button>
+      </div>
+      <div id="addStatus">尚未新增</div>
+    </div>
+
+    <div class="section">
+      <h3>查詢備忘錄（GET）</h3>
+      <div class="form">
+        <input id="idInput" type="number" placeholder="輸入 id（例：1）" />
+        <button id="getBtn">查詢</button>
+      </div>
+      <div id="getStatus">尚未查詢</div>
+    </div>
+
+    <div class="card">
+      <div class="label">回傳結果</div>
+      <pre id="result">-</pre>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

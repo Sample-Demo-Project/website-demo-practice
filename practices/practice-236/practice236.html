@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POST 評分</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>商品評分</h1>
+    <p>輸入商品名稱與分數，送出到 Flask API。</p>
+
+    <div class="form">
+      <input id="productInput" type="text" placeholder="商品名稱（例：咖啡）" />
+      <input id="scoreInput" type="number" placeholder="分數（1-5）" />
+      <button id="postBtn">送出</button>
+    </div>
+
+    <div id="status">尚未送出</div>
+
+    <div class="card">
+      <div class="label">回傳結果</div>
+      <pre id="result">-</pre>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

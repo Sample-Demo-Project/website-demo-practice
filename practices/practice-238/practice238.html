@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>任務管理進階版</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>任務管理進階版</h1>
+    <p>練習 GET + Query / POST / PUT / DELETE / 統計。</p>
+
+    <div class="section">
+      <h3>新增任務（POST /tasks）</h3>
+      <div class="form">
+        <input id="titleInput" type="text" placeholder="任務內容（例：Study Flask）" />
+        <button id="addBtn">新增</button>
+      </div>
+      <div id="addStatus">尚未新增</div>
+    </div>
+
+    <div class="section">
+      <h3>查詢任務（GET /tasks）</h3>
+      <div class="form">
+        <select id="filterSelect">
+          <option value="">全部</option>
+          <option value="true">已完成</option>
+          <option value="false">未完成</option>
+        </select>
+        <button id="listBtn">查詢</button>
+      </div>
+      <div id="listStatus">尚未查詢</div>
+    </div>
+
+    <div class="section">
+      <h3>更新完成狀態（PUT /tasks/{id}）</h3>
+      <div class="form">
+        <input id="updateIdInput" type="number" placeholder="任務 id（例：1）" />
+        <select id="completedSelect">
+          <option value="true">完成</option>
+          <option value="false">未完成</option>
+        </select>
+        <button id="updateBtn">更新</button>
+      </div>
+      <div id="updateStatus">尚未更新</div>
+    </div>
+
+    <div class="section">
+      <h3>刪除任務（DELETE /tasks/{id}）</h3>
+      <div class="form">
+        <input id="deleteIdInput" type="number" placeholder="任務 id（例：1）" />
+        <button id="deleteBtn">刪除</button>
+      </div>
+      <div id="deleteStatus">尚未刪除</div>
+    </div>
+
+    <div class="section">
+      <h3>統計資訊（GET /tasks/stats）</h3>
+      <button id="statsBtn">取得統計</button>
+      <div id="statsStatus">尚未查詢</div>
+    </div>
+
+    <div class="card">
+      <div class="label">回傳結果</div>
+      <pre id="result">-</pre>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

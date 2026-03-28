@@ -4,7 +4,7 @@ const container = document.getElementById("practice-list");
 const practices = {
     title: "Practice",
     start: 210,
-    end: 220,
+    end: 240,
     basePath: "practices",
     filePrefix: "practice"
 };

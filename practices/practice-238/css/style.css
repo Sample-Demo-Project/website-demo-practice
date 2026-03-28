@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  padding: 24px;
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+p {
+  margin: 0 0 14px;
+  color: #555;
+}
+
+.section {
+  margin-bottom: 16px;
+}
+
+h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  margin: 8px 0;
+  flex-wrap: wrap;
+}
+
+.form input,
+.form select {
+  flex: 1;
+  min-width: 160px;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  padding: 8px 12px;
+  border: 1px solid #3b67ff;
+  background: #3b67ff;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#addStatus,
+#listStatus,
+#updateStatus,
+#deleteStatus,
+#statsStatus {
+  color: #666;
+  font-size: 14px;
+}
+
+.card {
+  background: #f9fafc;
+  border: 1px solid #e6e9f5;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.label {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+#result {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  white-space: pre-wrap;
+}

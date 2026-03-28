@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Async/Await Exercise</title>
+  <style>
+    body { font-family: Arial; padding: 30px; }
+    button { padding: 10px 15px; margin-right: 10px; }
+    #log {
+      margin-top: 12px;
+      background: #fff;
+      border: 1px solid #ccc;
+      min-height: 100px;
+      padding: 10px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>泡泡麵模擬</h2>
+
+  <button onclick="cookNoodles()">Start Cooking</button>
+  <button onclick="clearLog()">Clear</button>
+
+  <div id="log"></div>
+
+  <script>
+    const logBox = document.getElementById("log");
+
+    function log(message) {
+      logBox.textContent += message + "\n";
+    }
+
+    function clearLog() {
+      logBox.textContent = "";
+    }
+
+    function wait(ms) {
+      return new Promise((resolve) => {
+        setTimeout(resolve, ms);
+      });
+    }
+
+    // =========================
+    // TODO: 完成 async function
+    // =========================
+
+  </script>
+
+</body>
+</html>
